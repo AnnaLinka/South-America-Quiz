@@ -3,7 +3,7 @@ Simple web game - check your geography knowledge.
 Questions written in Polish.
 
 ## How to play?
-Simply start with indexIntro.php and follow choosing different categories.
+Start with indexIntro.php and follow choosing different categories.
 
 ## Built With
 
