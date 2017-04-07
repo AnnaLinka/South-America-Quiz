@@ -1,0 +1,243 @@
+$color-pink:#B84E70;
+$color-freshgreen: #81B84D;
+$color-green:#4DB872;
+$color-darkgrey: #474747;
+$color-lightgrey: #B8B8B8;
+$color-mediumgrey: #949494;
+
+$color-navy: #47405e;
+$color-orange: #f89b5b;
+$color-yellow: #fbdd62;
+$color-blue: #69cdd6;
+$color-plain: #ffffff;
+
+//Common styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  //font-family: 'Sorts Mill Goudy', serif;
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+//Styles for intro screen
+body.intro {
+    background: url('../images/quiz-intro-big.svg');
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      visibility: none;
+      width: 50%;
+      height: 30%;
+    }
+}
+
+//Styles for start screen
+body.start {
+  background-color: $color-blue;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  @media (min-width: 900px), (orientation: landscape) {
+    flex-wrap: nowrap;
+  }
+
+  a {
+    width: 50%;
+    align-content: space-around;
+    flex-direction: row;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    transition: 0.4s transform linear;
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.4s transform linear;
+      background-color: $color-yellow;
+      color:$color-navy;
+      border: 2px dotted $color-blue;
+      border-radius: 20%;
+    }
+    @media (min-width: 900px), (orientation: landscape) {
+      width: 100%;
+      margin-top: 10%;
+      margin-bottom: 10%;
+    }
+
+    img {
+      align-items: center;
+      width: 50%;
+      height: 90%;
+      @media (min-width: 900px), (orientation: landscape) {
+        width: 90%;
+      }
+    }
+  }
+}
+
+
+//Styles for game screens
+body.game {
+  display: block;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-blue;
+  // &::after {
+  //   background: url('../images/bg-game.png');
+  //   opacity: 0.6;
+  //   content: "";
+  //   top: 0;
+  //   left: 0;
+  //   bottom: 0;
+  //   right: 0;
+  //   position: absolute;
+  //   z-index: -1;
+  // }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  &::after,
+  &::before {
+    clear: both;
+    display: block;
+    content: "";
+  }
+}
+
+section.main {
+    width: 100vw;
+    height: 100vh;
+}
+
+section.text {
+  // margin-left: 2%;
+  //   width: 100%;
+  @media (min-width: 860px), (orientation: landscape) {
+    margin-left: 3%;
+    width: 34%;
+    float: left;
+    height: 90%;
+  }
+  div.instruction,
+  div.bravo,
+  div.result,
+  button.newgame {
+    //padding: 0.5em;
+    font-size: 1em;
+    margin-top: 0.5em;
+    background-color: $color-yellow;
+    border: 3px dotted $color-blue;
+
+    color: $color-navy;
+    text-align: center;
+
+    @media (min-width: 860px), (orientation: landscape) {
+      padding: 0.5em;
+      font-size: 1.5em;
+      margin-top: 1.5em;
+      border-radius: 10%;
+    }
+  }
+  div.bravo {
+    display: none;
+  }
+  button.newgame {
+      display: none;
+      margin: 0 auto;
+      margin-top: 1.5em;
+  }
+  p.question {
+      text-transform: uppercase;
+      margin-bottom: 1em;
+  }
+  #textSlider {
+    > * {
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+    p {
+        font-weight: 600;
+    }
+  }
+}
+
+section.map {
+  //height: 50%;
+  svg {
+    width: 90%;
+    height: 100%;
+    &:hover {
+      cursor: pointer;
+    }
+    @media (min-width: 860px), (orientation: landscape) {
+      margin-top: 5%;
+      width: 100%;
+      //height: 100%;
+    }
+  }
+  @media (min-width: 860px), (orientation: landscape) {
+    float: left;
+    &::after,
+    &::before {
+      clear: both;
+      display: block;
+      content: "";
+    }
+  }
+}
+
+#slider_flags {
+  margin: 0 auto;
+  width:227px;
+  height:152px;
+  overflow:hidden;
+  position:relative;
+
+  .flags_container {
+    height:152px;
+    position:relative;
+  }
+  .slide {
+    width:227px;
+    height:152px;
+    float:left;
+    background-color:#f1f1f1;
+    img {
+      width:227px;
+      height:152px;
+      float:left;
+    }
+  }
+}
+
+//Styles for last screen
+body.end {
+  background: url('../images/quiz-end-big.svg');
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    visibility: none;
+    width: 50%;
+    height: 30%;
+  }
+}
