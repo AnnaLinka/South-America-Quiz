@@ -6,12 +6,11 @@ var sourcemaps = require('gulp-sourcemaps');
 
 
 gulp.task('sass', function () {
-return gulp.src('sass/*.scss')  //gdyby było samo scss/style.scss obserwowałby tylko jeden plik, z * obserwuje wszystkie
-.pipe(sourcemaps.init())
+return gulp.src('sass/*.scss')
 .pipe(sass({
   errLogToConsole:true,
   outputStyle: 'extended'
-})) //tu nie może być ; bo by zakończył
+})) 
 .pipe(sourcemaps.write())
 .pipe(gulp.dest('css'))
 });
