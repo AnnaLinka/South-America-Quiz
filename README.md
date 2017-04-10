@@ -10,4 +10,5 @@ Start with indexIntro.php and follow choosing different categories.
 * HTML5/CSS3 ans Sass
 * JavaScript and jQuery
 * PHP
+* RWD
 * svg
