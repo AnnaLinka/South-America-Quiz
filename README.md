@@ -1,5 +1,6 @@
 # South-America-Quiz
-Simple web game - check your geography knowledge.
+Web game - check your geography knowledge. 
+Coded and designed to be final project of coding boot-camp.
 Questions written in Polish.
 
 ## How to play?
