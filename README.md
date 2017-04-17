@@ -5,6 +5,7 @@ Questions written in Polish.
 
 ## How to play?
 Start with indexIntro.php and follow choosing different categories. Click: http://quiz-geo.16mb.com/indexIntro.php
+(temporary hosting on free server, sometimes loading a little bit slow, so please be patient).
 
 ## Built With
 
